@@ -1,0 +1,326 @@
+<?xml version="1.0"?>
+<rdf:RDF xmlns="http://www.semanticweb.org/intelligent_tutoring_system.owl/"
+     xml:base="http://www.semanticweb.org/intelligent_tutoring_system.owl/"
+     xmlns:owl="http://www.w3.org/2002/07/owl#"
+     xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+     xmlns:xml="http://www.w3.org/XML/1998/namespace"
+     xmlns:xsd="http://www.w3.org/2001/XMLSchema#"
+     xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#"
+     xmlns:intelligent_tutoring_system="http://www.semanticweb.org/intelligent_tutoring_system.owl#">
+    <owl:Ontology rdf:about="http://www.semanticweb.org/intelligent_tutoring_system.owl"/>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Object Properties
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- http://www.semanticweb.org/intelligent_tutoring_system.owl#hasDifficulty -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/intelligent_tutoring_system.owl#hasDifficulty">
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/intelligent_tutoring_system.owl#Operation"/>
+        <rdfs:range rdf:resource="http://www.semanticweb.org/intelligent_tutoring_system.owl#DifficultyLevel"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/intelligent_tutoring_system.owl#hasOperand -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/intelligent_tutoring_system.owl#hasOperand">
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/intelligent_tutoring_system.owl#Operation"/>
+        <rdfs:range rdf:resource="http://www.semanticweb.org/intelligent_tutoring_system.owl#Operand"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/intelligent_tutoring_system.owl#hasResult -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/intelligent_tutoring_system.owl#hasResult">
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/intelligent_tutoring_system.owl#Operation"/>
+        <rdfs:range rdf:resource="http://www.semanticweb.org/intelligent_tutoring_system.owl#Result"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/intelligent_tutoring_system.owl#requiresFeedback -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/intelligent_tutoring_system.owl#requiresFeedback">
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/intelligent_tutoring_system.owl#Result"/>
+        <rdfs:range rdf:resource="http://www.semanticweb.org/intelligent_tutoring_system.owl#Feedback"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Data properties
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- http://www.semanticweb.org/intelligent_tutoring_system.owl#feedback -->
+
+    <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/intelligent_tutoring_system.owl#feedback">
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/intelligent_tutoring_system.owl#Feedback"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/intelligent_tutoring_system.owl#hint -->
+
+    <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/intelligent_tutoring_system.owl#hint">
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/intelligent_tutoring_system.owl#Feedback"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/intelligent_tutoring_system.owl#isValid -->
+
+    <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/intelligent_tutoring_system.owl#isValid">
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/intelligent_tutoring_system.owl#Operation"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#boolean"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/intelligent_tutoring_system.owl#value -->
+
+    <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/intelligent_tutoring_system.owl#value">
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/intelligent_tutoring_system.owl#Number"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#integer"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Classes
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- http://www.semanticweb.org/intelligent_tutoring_system.owl#Addition -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/intelligent_tutoring_system.owl#Addition">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/intelligent_tutoring_system.owl#Operation"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/intelligent_tutoring_system.owl#Advanced -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/intelligent_tutoring_system.owl#Advanced">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/intelligent_tutoring_system.owl#DifficultyLevel"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/intelligent_tutoring_system.owl#ArithmeticOperation -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/intelligent_tutoring_system.owl#ArithmeticOperation">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/intelligent_tutoring_system.owl#Mathematics"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/intelligent_tutoring_system.owl#Beginner -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/intelligent_tutoring_system.owl#Beginner">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/intelligent_tutoring_system.owl#DifficultyLevel"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/intelligent_tutoring_system.owl#Decimal -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/intelligent_tutoring_system.owl#Decimal">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/intelligent_tutoring_system.owl#Number"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/intelligent_tutoring_system.owl#DifficultyLevel -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/intelligent_tutoring_system.owl#DifficultyLevel">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/intelligent_tutoring_system.owl#ArithmeticOperation"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/intelligent_tutoring_system.owl#Division -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/intelligent_tutoring_system.owl#Division">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/intelligent_tutoring_system.owl#Operation"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/intelligent_tutoring_system.owl#Feedback -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/intelligent_tutoring_system.owl#Feedback">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/intelligent_tutoring_system.owl#ArithmeticOperation"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/intelligent_tutoring_system.owl#Fraction -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/intelligent_tutoring_system.owl#Fraction">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/intelligent_tutoring_system.owl#Number"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/intelligent_tutoring_system.owl#Intermediate -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/intelligent_tutoring_system.owl#Intermediate">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/intelligent_tutoring_system.owl#DifficultyLevel"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/intelligent_tutoring_system.owl#Mathematics -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/intelligent_tutoring_system.owl#Mathematics">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/intelligent_tutoring_system.owl#Module"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/intelligent_tutoring_system.owl#Module -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/intelligent_tutoring_system.owl#Module"/>
+    
+
+
+    <!-- http://www.semanticweb.org/intelligent_tutoring_system.owl#Multiplication -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/intelligent_tutoring_system.owl#Multiplication">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/intelligent_tutoring_system.owl#Operation"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/intelligent_tutoring_system.owl#Number -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/intelligent_tutoring_system.owl#Number">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/intelligent_tutoring_system.owl#ArithmeticOperation"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/intelligent_tutoring_system.owl#Operand -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/intelligent_tutoring_system.owl#Operand">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/intelligent_tutoring_system.owl#ArithmeticOperation"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/intelligent_tutoring_system.owl#Operation -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/intelligent_tutoring_system.owl#Operation">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/intelligent_tutoring_system.owl#ArithmeticOperation"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/intelligent_tutoring_system.owl#Person -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/intelligent_tutoring_system.owl#Person"/>
+    
+
+
+    <!-- http://www.semanticweb.org/intelligent_tutoring_system.owl#Result -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/intelligent_tutoring_system.owl#Result">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/intelligent_tutoring_system.owl#ArithmeticOperation"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/intelligent_tutoring_system.owl#Student -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/intelligent_tutoring_system.owl#Student">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/intelligent_tutoring_system.owl#Person"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/intelligent_tutoring_system.owl#Subtraction -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/intelligent_tutoring_system.owl#Subtraction">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/intelligent_tutoring_system.owl#Operation"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/intelligent_tutoring_system.owl#Teacher -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/intelligent_tutoring_system.owl#Teacher">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/intelligent_tutoring_system.owl#Person"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/intelligent_tutoring_system.owl#WholeNumber -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/intelligent_tutoring_system.owl#WholeNumber">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/intelligent_tutoring_system.owl#Number"/>
+    </owl:Class>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Individuals
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- http://www.semanticweb.org/intelligent_tutoring_system.owl#Addition1 -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/intelligent_tutoring_system.owl#Addition1">
+        <rdf:type rdf:resource="http://www.semanticweb.org/intelligent_tutoring_system.owl#Addition"/>
+        <intelligent_tutoring_system:feedback>Correct! Addition is commutative.</intelligent_tutoring_system:feedback>
+        <intelligent_tutoring_system:value rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">2</intelligent_tutoring_system:value>
+        <intelligent_tutoring_system:value rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">3</intelligent_tutoring_system:value>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/intelligent_tutoring_system.owl#Division1 -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/intelligent_tutoring_system.owl#Division1">
+        <rdf:type rdf:resource="http://www.semanticweb.org/intelligent_tutoring_system.owl#Division"/>
+        <intelligent_tutoring_system:feedback>Division by zero is not allowed.</intelligent_tutoring_system:feedback>
+        <intelligent_tutoring_system:value rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">0</intelligent_tutoring_system:value>
+        <intelligent_tutoring_system:value rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">10</intelligent_tutoring_system:value>
+    </owl:NamedIndividual>
+</rdf:RDF>
+
+
+
+<!-- Generated by the OWL API (version 4.5.29.2024-05-13T12:11:03Z) https://github.com/owlcs/owlapi -->
+
